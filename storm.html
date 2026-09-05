@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Storm Disaster Awareness</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+color:white;
+
+background:
+radial-gradient(circle at top,#34206b,#050816 70%);
+
+background-attachment:fixed;
+
+overflow-x:hidden;
+
+}
+
+
+
+/* 3D Floating Background Shapes */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:300px;
+height:300px;
+
+background:linear-gradient(45deg,#00eaff,#8a2be2);
+
+border-radius:50%;
+
+top:40px;
+left:-120px;
+
+filter:blur(40px);
+
+opacity:0.6;
+
+z-index:-1;
+
+animation:move 8s infinite alternate;
+
+}
+
+
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:350px;
+height:350px;
+
+background:linear-gradient(45deg,#ff0080,#00ffff);
+
+border-radius:50%;
+
+bottom:-100px;
+right:-100px;
+
+filter:blur(50px);
+
+opacity:0.5;
+
+z-index:-1;
+
+animation:move 10s infinite alternate;
+
+}
+
+
+
+@keyframes move{
+
+from{
+transform:translateY(0px) rotate(0deg);
+}
+
+to{
+transform:translateY(-80px) rotate(180deg);
+}
+
+}
+
+
+
+
+.container{
+
+width:90%;
+margin:auto;
+padding:35px;
+
+}
+
+
+
+h1{
+
+text-align:center;
+
+font-size:60px;
+
+color:#9efcff;
+
+
+text-shadow:
+0 0 20px #00ffff,
+0 0 50px #8a2be2;
+
+
+animation:title 2s infinite alternate;
+
+}
+
+
+
+@keyframes title{
+
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.07);
+}
+
+}
+
+
+
+
+.card{
+
+
+background:rgba(255,255,255,0.12);
+
+border:1px solid rgba(255,255,255,0.3);
+
+padding:30px;
+
+margin:25px 0;
+
+border-radius:30px;
+
+
+box-shadow:
+
+0 25px 50px rgba(0,255,255,0.25);
+
+
+backdrop-filter:blur(15px);
+
+
+transform:
+
+perspective(900px)
+rotateX(3deg);
+
+
+}
+
+
+
+
+
+h2{
+
+color:#ffd369;
+
+font-size:30px;
+
+margin-bottom:15px;
+
+}
+
+
+
+ul{
+
+font-size:18px;
+
+line-height:2;
+
+}
+
+
+
+
+.grid{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+
+.box{
+
+flex:1;
+
+min-width:260px;
+
+
+background:rgba(0,0,0,0.35);
+
+padding:25px;
+
+border-radius:25px;
+
+
+box-shadow:
+
+0 0 30px #ff00cc;
+
+}
+
+
+
+
+.warning{
+
+color:#ff4d4d;
+
+font-weight:bold;
+
+}
+
+
+
+
+.map{
+
+width:100%;
+
+height:350px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+
+box-shadow:
+
+0 0 35px #00ffff;
+
+}
+
+
+
+
+button{
+
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:40px;
+
+
+background:
+
+linear-gradient(45deg,#00ffff,#8a2be2);
+
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+
+<h1>⛈️ STORM DISASTER AWARENESS ⛈️</h1>
+
+
+
+
+
+<div class="card">
+
+
+<h2>🌪️ What is a Storm?</h2>
+
+
+<p>
+
+A storm is a powerful weather event with strong winds,
+heavy rainfall, lightning and sometimes hail.
+It can damage buildings, trees, roads and electricity systems.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+<div class="box">
+
+<h2>⚠️ Warning Signs</h2>
+
+<ul>
+
+<li>🌩️ Dark heavy clouds</li>
+
+<li>💨 Sudden strong winds</li>
+
+<li>🌧️ Heavy rainfall</li>
+
+<li>⚡ Lightning and thunder</li>
+
+<li>📢 Weather alerts</li>
+
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h2>🛡️ Precautions</h2>
+
+
+<ul>
+
+<li>Stay indoors during storms</li>
+
+<li>Secure doors and windows</li>
+
+<li>Keep emergency kit ready</li>
+
+<li>Charge phones and power banks</li>
+
+<li>Avoid open fields</li>
+
+
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h2>🚨 Instant Steps</h2>
+
+
+<ul>
+
+
+<li class="warning">Stay calm</li>
+
+<li>Move away from windows</li>
+
+<li>Switch off electricity if needed</li>
+
+<li>Avoid touching wires</li>
+
+<li>Follow emergency instructions</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>🏠 After Storm Safety</h2>
+
+
+<ul>
+
+
+<li>Check injuries and give first aid</li>
+
+<li>Avoid damaged buildings</li>
+
+<li>Stay away from fallen wires</li>
+
+<li>Clean dangerous areas carefully</li>
+
+<li>Report damage to authorities</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>🗺️ High Risk Storm Areas Map</h2>
+
+
+<p>
+
+Upload storm risk area map here:
+
+</p>
+
+
+<br>
+
+
+<img class="map" src="image/forestmap.jpg">
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>📍 High Risk Areas</h2>
+
+
+<ul>
+
+
+<li>🌊 Coastal regions</li>
+
+<li>🏔️ Mountain areas</li>
+
+<li>🌧️ Heavy rainfall zones</li>
+
+<li>🌲 Forest regions</li>
+
+<li>🏙️ Urban areas with weak structures</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>📞 Emergency Numbers</h2>
+
+
+<ul>
+
+
+<li>🚨 Emergency: 112</li>
+
+<li>🚑 Ambulance: 108</li>
+
+<li>🚓 Police: 112</li>
+
+<li>🌍 Disaster Management: 1078</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<center>
+
+<button>
+
+⛈️ Stay Safe From Storm
+
+</button>
+
+
+</center>
+
+
+
+
+
+</div>
+
+
+</body>
+
+</html>

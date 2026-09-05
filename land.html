@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Landslide Disaster Awareness</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+    color:white;
+
+    background:
+    linear-gradient(rgba(5,10,20,0.75),rgba(5,10,20,0.75)),
+    url("landslide.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+}
+
+
+
+.container{
+
+    width:90%;
+    margin:auto;
+    padding:30px;
+
+}
+
+
+
+h1{
+
+    text-align:center;
+    font-size:60px;
+
+    color:#7CFF6B;
+
+    text-shadow:
+    0 0 20px #00ff99,
+    0 0 40px #00cc66;
+
+    animation:float 2s infinite alternate;
+
+}
+
+
+
+@keyframes float{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-10px);
+}
+
+}
+
+
+
+
+.card{
+
+    background:rgba(0,0,0,0.75);
+
+    margin:25px 0;
+    padding:30px;
+
+    border-radius:25px;
+
+    border:1px solid #00ff99;
+
+    box-shadow:
+    0 15px 35px rgba(0,255,150,0.4);
+
+    transform:perspective(900px) rotateX(2deg);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+h2{
+
+    color:#00ffcc;
+    font-size:30px;
+    margin-bottom:15px;
+
+}
+
+
+
+ul{
+
+    font-size:18px;
+    line-height:2;
+
+}
+
+
+
+.warning{
+
+    color:#ff5252;
+    font-weight:bold;
+
+}
+
+
+
+
+.map{
+
+    width:100%;
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 30px #00ccff;
+
+}
+
+
+
+
+.boxes{
+
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+
+
+.small{
+
+flex:1;
+min-width:250px;
+
+background:rgba(20,20,30,0.8);
+
+padding:20px;
+
+border-radius:20px;
+
+box-shadow:
+0 0 25px purple;
+
+}
+
+
+
+button{
+
+    padding:18px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#00ff99;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    background:#00ccff;
+    color:white;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+
+<h1>🏔️ LANDSLIDE DISASTER AWARENESS 🏔️</h1>
+
+
+
+
+<div class="card">
+
+<h2>🌍 What is a Landslide?</h2>
+
+<p>
+
+A landslide is the sudden movement of rocks, soil and debris down a slope.
+It can happen due to heavy rainfall, earthquakes, weak soil or human activities.
+
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="boxes">
+
+
+<div class="small">
+
+<h2>⚠️ Warning Signs</h2>
+
+<ul>
+
+<li>Cracks in roads and walls</li>
+
+<li>Falling rocks</li>
+
+<li>Leaning trees or poles</li>
+
+<li>Sudden muddy water flow</li>
+
+<li>Unusual ground movement</li>
+
+</ul>
+
+</div>
+
+
+
+
+<div class="small">
+
+<h2>🛡️ Precautions</h2>
+
+<ul>
+
+<li>Avoid steep slopes</li>
+
+<li>Do not build near mountains</li>
+
+<li>Keep drainage clean</li>
+
+<li>Plant trees to prevent soil erosion</li>
+
+<li>Follow weather updates</li>
+
+</ul>
+
+</div>
+
+
+
+
+<div class="small">
+
+<h2>🚨 Instant Steps</h2>
+
+<ul>
+
+<li class="warning">Stay calm</li>
+
+<li>Move away from slope areas</li>
+
+<li>Go to open safe locations</li>
+
+<li>Protect head and body</li>
+
+<li>Follow rescue instructions</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>🏠 After Landslide Safety</h2>
+
+
+<ul>
+
+<li>Check injuries and give first aid</li>
+
+<li>Do not enter damaged buildings</li>
+
+<li>Avoid blocked roads</li>
+
+<li>Watch for another landslide</li>
+
+<li>Report danger zones</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>🗺️ High Risk Landslide Area Map</h2>
+
+
+<p>Upload landslide risk zone map:</p>
+
+<br>
+
+
+<img class="map" src="image/landmap.jpg">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>📍 High Risk Areas</h2>
+
+
+<ul>
+
+<li>🏔️ Mountain regions</li>
+
+<li>🌧️ Heavy rainfall zones</li>
+
+<li>🌲 Deforested areas</li>
+
+<li>🪨 Weak rock regions</li>
+
+<li>🛣️ Hill road construction areas</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>📞 Emergency Numbers</h2>
+
+
+<ul>
+
+<li>🚨 Emergency: 112</li>
+
+<li>🚑 Ambulance: 108</li>
+
+<li>🚓 Police: 112</li>
+
+<li>🌍 Disaster Management: 1078</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<center>
+
+<button>
+
+🏔️ Stay Safe From Landslide
+
+</button>
+
+</center>
+
+
+
+</div>
+
+
+</body>
+</html>

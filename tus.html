@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Tsunami Disaster Awareness</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+color:white;
+
+background:
+linear-gradient(rgba(0,10,30,0.75),rgba(0,10,30,0.75)),
+url("tsunami.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+}
+
+
+
+
+.container{
+
+width:90%;
+margin:auto;
+padding:30px;
+
+}
+
+
+
+
+h1{
+
+text-align:center;
+
+font-size:60px;
+
+color:#00eaff;
+
+
+text-shadow:
+0 0 20px cyan,
+0 0 50px blue;
+
+
+animation:wave 2s infinite alternate;
+
+}
+
+
+
+@keyframes wave{
+
+from{
+transform:translateY(0px);
+}
+
+
+to{
+transform:translateY(-12px);
+}
+
+}
+
+
+
+
+
+.card{
+
+background:rgba(0,15,40,0.75);
+
+padding:30px;
+
+margin:25px 0;
+
+border-radius:30px;
+
+
+border:2px solid #00eaff;
+
+
+box-shadow:
+
+0 20px 40px rgba(0,200,255,0.5);
+
+
+transform:
+
+perspective(900px)
+rotateY(3deg);
+
+
+backdrop-filter:blur(12px);
+
+}
+
+
+
+
+h2{
+
+color:#00ffff;
+
+font-size:30px;
+
+margin-bottom:15px;
+
+}
+
+
+
+
+ul{
+
+font-size:18px;
+
+line-height:2;
+
+}
+
+
+
+
+
+.warning{
+
+color:#ff4444;
+
+font-weight:bold;
+
+}
+
+
+
+
+
+.grid{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+
+
+.box{
+
+flex:1;
+
+min-width:260px;
+
+background:rgba(10,20,60,0.8);
+
+padding:25px;
+
+border-radius:25px;
+
+
+box-shadow:
+
+0 0 25px #9d4edd;
+
+}
+
+
+
+
+
+.map{
+
+width:100%;
+
+height:350px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+
+box-shadow:
+
+0 0 30px #00ccff;
+
+}
+
+
+
+
+
+button{
+
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+
+background:#00eaff;
+
+font-size:20px;
+
+cursor:pointer;
+
+
+}
+
+
+
+button:hover{
+
+background:#0066ff;
+
+color:white;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+
+
+
+<div class="container">
+
+
+
+<h1>🌊 TSUNAMI DISASTER AWARENESS 🌊</h1>
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>🌍 What is Tsunami?</h2>
+
+
+<p>
+
+A tsunami is a series of powerful ocean waves caused by
+underwater earthquakes, volcanic eruptions or landslides.
+It can cause severe flooding and destruction in coastal areas.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+<div class="box">
+
+<h2>⚠️ Warning Signs</h2>
+
+<ul>
+
+<li>🌊 Sudden sea level rise</li>
+
+<li>🌍 Strong earthquake near coast</li>
+
+<li>🐚 Ocean water moving backward</li>
+
+<li>🔊 Unusual ocean sounds</li>
+
+<li>📢 Tsunami warning alerts</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div class="box">
+
+<h2>🛡️ Precautions</h2>
+
+<ul>
+
+<li>Move to higher ground</li>
+
+<li>Know evacuation routes</li>
+
+<li>Keep emergency kit ready</li>
+
+<li>Avoid coastal areas</li>
+
+<li>Follow official updates</li>
+
+
+</ul>
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+<h2>🚨 Instant Steps</h2>
+
+
+<ul>
+
+<li class="warning">Act quickly</li>
+
+<li>Leave beach immediately</li>
+
+<li>Move away from water</li>
+
+<li>Do not wait for warnings</li>
+
+<li>Help children and elderly</li>
+
+
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>🏠 After Tsunami Safety</h2>
+
+
+<ul>
+
+
+<li>Check injuries and give first aid</li>
+
+<li>Avoid flood water</li>
+
+<li>Do not enter damaged buildings</li>
+
+<li>Watch for more waves</li>
+
+<li>Report damaged areas</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>🗺️ High Risk Tsunami Areas Map</h2>
+
+
+<p>Upload tsunami risk map here:</p>
+
+
+<br>
+
+
+<img class="map" src="image/tusmap.jpg">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>📍 High Risk Areas</h2>
+
+
+<ul>
+
+<li>🌊 Coastal regions</li>
+
+<li>🏝️ Islands</li>
+
+<li>🌍 Tectonic plate boundaries</li>
+
+<li>🏖️ Low lying coastal areas</li>
+
+<li>🌋 Volcanic coastal zones</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>📞 Emergency Numbers</h2>
+
+
+<ul>
+
+
+<li>🚨 Emergency: 112</li>
+
+<li>🚑 Ambulance: 108</li>
+
+<li>🚓 Police: 112</li>
+
+<li>🌍 Disaster Management: 1078</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<center>
+
+
+<button>
+
+🌊 Stay Safe From Tsunami
+
+</button>
+
+
+</center>
+
+
+
+
+</div>
+
+
+</body>
+
+</html>

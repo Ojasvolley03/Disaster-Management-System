@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Flood Awareness 3D</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+
+min-height:100vh;
+
+background:
+linear-gradient(135deg,#2b1608,#6b3a1e,#b85c00,#3a0d0d);
+
+color:white;
+
+overflow-x:hidden;
+
+perspective:1200px;
+
+}
+
+
+
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:500px;
+height:500px;
+
+background:#ffcc00;
+
+border-radius:50%;
+
+filter:blur(130px);
+
+top:-150px;
+right:-150px;
+
+opacity:.25;
+
+animation:bgmove 8s infinite alternate;
+
+}
+
+
+
+@keyframes bgmove{
+
+
+from{
+
+transform:translate(0,0);
+
+}
+
+
+to{
+
+transform:translate(-500px,400px);
+
+}
+
+}
+
+
+
+
+
+
+/* Heading */
+
+
+.title{
+
+text-align:center;
+
+padding:30px;
+
+}
+
+
+
+
+.title h1{
+
+
+font-size:80px;
+
+letter-spacing:8px;
+
+color:#ffd000;
+
+
+text-shadow:
+
+5px 5px 0 #7a2500,
+10px 10px 0 #3d1400,
+15px 20px 30px black;
+
+
+
+animation:title3d 3s infinite alternate;
+
+
+}
+
+
+
+
+
+@keyframes title3d{
+
+
+0%{
+
+transform:
+
+rotateX(0deg)
+rotateY(-12deg)
+translateY(0);
+
+}
+
+
+
+50%{
+
+transform:
+
+rotateX(15deg)
+rotateY(12deg)
+translateY(-15px);
+
+}
+
+
+
+100%{
+
+transform:
+
+rotateX(-10deg)
+rotateY(-15deg)
+translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+.title p{
+
+font-size:20px;
+
+}
+
+
+
+
+
+
+
+.container{
+
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:30px;
+
+padding:30px;
+
+}
+
+
+
+
+
+/* 3D Cards */
+
+
+.card{
+
+
+background:
+
+rgba(80,40,10,0.45);
+
+
+backdrop-filter:blur(15px);
+
+
+
+border-radius:25px;
+
+
+
+padding:25px;
+
+
+
+margin-bottom:25px;
+
+
+
+box-shadow:
+
+
+0 20px 45px black;
+
+
+transition:.5s;
+
+
+transform-style:preserve-3d;
+
+
+animation:float 4s infinite ease-in-out;
+
+
+}
+
+
+
+
+.card:hover{
+
+
+transform:
+
+rotateX(12deg)
+rotateY(-12deg)
+translateY(-15px)
+scale(1.03);
+
+
+box-shadow:
+
+0 35px 70px black;
+
+
+}
+
+
+
+
+
+
+@keyframes float{
+
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+
+}
+
+
+
+
+
+.card h2{
+
+
+color:#ffd000;
+
+
+margin-bottom:15px;
+
+
+text-shadow:
+
+2px 2px black;
+
+
+}
+
+
+
+
+
+
+.card p,
+li{
+
+
+font-size:18px;
+
+line-height:1.7;
+
+
+}
+
+
+
+
+
+
+
+
+/* Emergency Box */
+
+
+.emergency{
+
+
+background:
+
+linear-gradient(
+135deg,
+rgba(180,0,0,.7),
+rgba(255,100,0,.3)
+);
+
+
+
+border:2px solid #ffd000;
+
+
+animation:danger 2s infinite;
+
+
+}
+
+
+
+
+
+@keyframes danger{
+
+
+50%{
+
+box-shadow:
+
+0 0 40px red;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* Map */
+
+
+.map{
+
+
+height:200px;
+
+
+background:
+
+linear-gradient(45deg,#3d1400,#ff8800);
+
+
+
+border-radius:20px;
+
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+font-size:30px;
+
+
+box-shadow:
+
+inset 0 0 30px black;
+
+
+
+}
+
+
+
+
+
+
+
+footer{
+
+
+text-align:center;
+
+padding:20px;
+
+font-size:18px;
+
+text-shadow:2px 2px black;
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+<div class="title">
+
+
+<h1>FLOOD</h1>
+
+
+<p>
+Disaster Awareness & Safety Guide
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="container">
+
+
+
+
+
+
+<div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>What is Flood?</h2>
+
+
+<p>
+
+A flood is a natural disaster where water covers normally dry land.
+It can happen due to heavy rainfall, river overflow, dam failure,
+or poor drainage systems.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>Warning Signs / Symptoms</h2>
+
+
+<ul>
+
+
+<li>Continuous heavy rainfall</li>
+
+<li>Water level rising in rivers</li>
+
+<li>Dark clouds and severe storms</li>
+
+<li>Water entering streets and homes</li>
+
+<li>Government flood warnings</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>Prevention & Safety Measures</h2>
+
+
+<ul>
+
+
+<li>Move to higher ground during warnings</li>
+
+<li>Keep emergency supplies ready</li>
+
+<li>Do not travel through moving water</li>
+
+<li>Protect important documents</li>
+
+<li>Follow disaster management instructions</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div>
+
+
+
+
+
+
+<div class="card emergency">
+
+
+<h2>Emergency Details</h2>
+
+
+<p>
+
+
+🚨 Emergency Number: 112
+
+<br>
+
+🚑 Ambulance: 108
+
+<br>
+
+🚒 Fire Service: 101
+
+<br>
+
+👮 Police: 100
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>High Risk Areas</h2>
+
+
+<ul>
+
+
+<li>River side locations</li>
+
+<li>Low lying areas</li>
+
+<li>Coastal regions</li>
+
+<li>Areas with poor drainage</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>Flood Risk Map</h2>
+
+
+<div class="map">
+
+MAP AREA
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>Emergency Kit</h2>
+
+
+<ul>
+
+
+<li>Drinking water</li>
+
+<li>First aid box</li>
+
+<li>Flashlight</li>
+
+<li>Food supplies</li>
+
+<li>Power bank</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<footer>
+
+
+Stay Alert | Stay Safe | Disaster Awareness Project
+
+
+</footer>
+
+
+
+
+
+
+</body>
+
+</html>
